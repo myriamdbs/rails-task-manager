@@ -1,12 +1,22 @@
-<h1><%= @task.title %></h1>
-<p><%= link_to "Edit the task", edit_task_path %></p>
-<p><%= @task.details %></p>
-<p>
-<% if @task.completed %>
-    <i class="far fa-check-square"></i> This task is completed
-  <% else %>
-    <i class="far fa-square"></i> This task is not completed
-  <% end %>
-</p>
-<br>
-<p><%= link_to "Back to list", tasks_path %></p>
+<div class="container">
+  <div class="header d-flex justify-content-between">
+    <h1><%= @task.title %>
+    <div class="pull-right btn btn-light">
+      <%= link_to '<i class="fas fa-pencil-alt"></i> Edit the task'.html_safe, edit_task_path %>
+    </div>
+    </h1>
+  </div>
+
+  <div class="alert alert-secondary" role="alert">
+    <p><%= @task.details %></p>
+  </div>
+  <p>
+  <% if @task.completed %>
+      <i class="far fa-check-square"></i> This task is completed
+    <% else %>
+      <i class="far fa-square"></i> This task is not completed
+    <% end %>
+  </p>
+  <br>
+  <p><%= link_to "Back to list", tasks_path %></p>
+</div>

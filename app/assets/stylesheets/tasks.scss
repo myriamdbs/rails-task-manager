@@ -1,3 +1,11 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.fa-plus {
+  color: #0156B3;
+}
