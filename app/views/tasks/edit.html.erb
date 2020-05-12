@@ -1,12 +1,5 @@
 <div class="container">
   <h1>Edit Task</h1>
-
-  <%= simple_form_for(@task) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :details %>
-    <%= f.input :completed %>
-    <%= f.submit "Edit Task", class: "btn btn-primary"%>
-  <% end %>
-  <hr>
+  <%= render "form", restaurant: @restaurant %>
   <p><%= link_to "Back to list", tasks_path  %></p>
 </div>
